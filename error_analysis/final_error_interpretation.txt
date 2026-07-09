@@ -1,0 +1,48 @@
+Final EyeQ Error Interpretation
+============================================================
+
+Main error pattern: The main error pattern involves Usable-related borderline confusion.
+Most common error type: Good_to_Usable
+Whether Usable is the most confusing class: Yes
+Whether the model safely separates Good and Reject: The model does not perfectly separate Good and Reject because some Reject images were predicted as Good.
+How many Reject images were predicted as Good: 2
+
+Why Usable is expected to be hard:
+Usable images are often borderline cases between clearly acceptable Good images and clearly unacceptable Reject images.
+This middle category can contain mild blur, partial artifacts, uneven illumination, or other quality issues that are not always visually extreme.
+
+What this means for a retinal image quality assessment system:
+The system should be reviewed carefully on borderline Usable samples because these are likely to drive many practical disagreements.
+High-risk errors such as Reject_to_Good matter most because they may allow poor-quality retinal images to pass downstream analysis.
+Some wrong predictions are high-confidence, so these examples should be reviewed carefully.
+
+Suggested next improvements:
+1. Review borderline Usable samples.
+2. Add more examples for confusing classes if available.
+3. Consider binary Acceptable vs Reject as a secondary experiment.
+4. Consider threshold-based rejection if high-risk errors matter.
+5. Consider Grad-CAM in a later explainability stage.
+
+Created files:
+C:\EyePACS\training_runs\convnext_tiny_512_run1\error_analysis\test_predictions_with_confidence.csv
+C:\EyePACS\training_runs\convnext_tiny_512_run1\error_analysis\test_errors_only.csv
+C:\EyePACS\training_runs\convnext_tiny_512_run1\error_analysis\high_confidence_errors.csv
+C:\EyePACS\training_runs\convnext_tiny_512_run1\error_analysis\low_confidence_predictions.csv
+C:\EyePACS\training_runs\convnext_tiny_512_run1\error_analysis\top_error_examples.csv
+C:\EyePACS\training_runs\convnext_tiny_512_run1\error_analysis\error_analysis_summary_report.txt
+C:\EyePACS\training_runs\convnext_tiny_512_run1\error_analysis\final_error_interpretation.txt
+C:\EyePACS\training_runs\convnext_tiny_512_run1\error_analysis\plots\error_type_distribution.png
+C:\EyePACS\training_runs\convnext_tiny_512_run1\error_analysis\plots\clinical_risk_distribution.png
+C:\EyePACS\training_runs\convnext_tiny_512_run1\error_analysis\plots\confidence_correct_vs_wrong.png
+C:\EyePACS\training_runs\convnext_tiny_512_run1\error_analysis\plots\confidence_by_true_class.png
+C:\EyePACS\training_runs\convnext_tiny_512_run1\error_analysis\plots\confidence_by_predicted_class.png
+C:\EyePACS\training_runs\convnext_tiny_512_run1\error_analysis\plots\probability_boxplot_by_true_class.png
+C:\EyePACS\training_runs\convnext_tiny_512_run1\error_analysis\plots\high_confidence_errors_by_type.png
+C:\EyePACS\training_runs\convnext_tiny_512_run1\error_analysis\sample_grids\Good_to_Usable_examples.png
+C:\EyePACS\training_runs\convnext_tiny_512_run1\error_analysis\sample_grids\Good_to_Reject_examples.png
+C:\EyePACS\training_runs\convnext_tiny_512_run1\error_analysis\sample_grids\Usable_to_Good_examples.png
+C:\EyePACS\training_runs\convnext_tiny_512_run1\error_analysis\sample_grids\Usable_to_Reject_examples.png
+C:\EyePACS\training_runs\convnext_tiny_512_run1\error_analysis\sample_grids\Reject_to_Good_examples.png
+C:\EyePACS\training_runs\convnext_tiny_512_run1\error_analysis\sample_grids\Reject_to_Usable_examples.png
+C:\EyePACS\training_runs\convnext_tiny_512_run1\error_analysis\sample_grids\high_confidence_errors_examples.png
+C:\EyePACS\training_runs\convnext_tiny_512_run1\error_analysis\sample_grids\low_confidence_predictions_examples.png

@@ -1,0 +1,4 @@
+class_id,class_name,class_weight
+0,Good,0.5711332030475543
+1,Usable,1.492377146240379
+2,Reject,1.7270469338814662

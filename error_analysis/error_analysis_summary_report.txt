@@ -1,0 +1,77 @@
+EyeQ ConvNeXt-Tiny Error Analysis Summary Report
+============================================================
+Total test images: 4315
+Correct predictions count: 3963
+Wrong predictions count: 352
+Accuracy: 0.918424
+Error rate: 0.081576
+
+Number of errors per error type and percentage from all errors:
+Good_to_Usable: 108 (30.68% of all errors)
+Usable_to_Good: 90 (25.57% of all errors)
+Usable_to_Reject: 73 (20.74% of all errors)
+Reject_to_Usable: 72 (20.45% of all errors)
+Good_to_Reject: 7 (1.99% of all errors)
+Reject_to_Good: 2 (0.57% of all errors)
+
+Number of high-confidence errors: 175
+Number of low-confidence predictions: 138
+Average confidence for correct predictions: 0.952900
+Average confidence for wrong predictions: 0.773701
+
+Average confidence per true class:
+0 (Good): 0.9619
+1 (Usable): 0.8782
+2 (Reject): 0.9370
+
+Average confidence per predicted class:
+0 (Good): 0.9648
+1 (Usable): 0.8753
+2 (Reject): 0.9334
+
+Clinical risk summary:
+Correct count: 3963
+Low risk error count: 180
+Medium risk error count: 170
+High risk error count: 2
+
+Specific high-risk count:
+Reject_to_Good count: 2
+
+Short interpretation:
+The model is mostly confusing borderline Usable-related images.
+Reject_to_Good is rare compared with all errors.
+Most frequent error type: Good_to_Usable
+The model shows overconfidence on some wrong predictions.
+Average confidence for correct predictions: 0.9529
+Average confidence for wrong predictions: 0.7737
+
+Skipped sample grids because no matching images existed:
+None
+
+Created files:
+C:\EyePACS\training_runs\convnext_tiny_512_run1\error_analysis\test_predictions_with_confidence.csv
+C:\EyePACS\training_runs\convnext_tiny_512_run1\error_analysis\test_errors_only.csv
+C:\EyePACS\training_runs\convnext_tiny_512_run1\error_analysis\high_confidence_errors.csv
+C:\EyePACS\training_runs\convnext_tiny_512_run1\error_analysis\low_confidence_predictions.csv
+C:\EyePACS\training_runs\convnext_tiny_512_run1\error_analysis\top_error_examples.csv
+C:\EyePACS\training_runs\convnext_tiny_512_run1\error_analysis\error_analysis_summary_report.txt
+C:\EyePACS\training_runs\convnext_tiny_512_run1\error_analysis\final_error_interpretation.txt
+C:\EyePACS\training_runs\convnext_tiny_512_run1\error_analysis\plots\error_type_distribution.png
+C:\EyePACS\training_runs\convnext_tiny_512_run1\error_analysis\plots\clinical_risk_distribution.png
+C:\EyePACS\training_runs\convnext_tiny_512_run1\error_analysis\plots\confidence_correct_vs_wrong.png
+C:\EyePACS\training_runs\convnext_tiny_512_run1\error_analysis\plots\confidence_by_true_class.png
+C:\EyePACS\training_runs\convnext_tiny_512_run1\error_analysis\plots\confidence_by_predicted_class.png
+C:\EyePACS\training_runs\convnext_tiny_512_run1\error_analysis\plots\probability_boxplot_by_true_class.png
+C:\EyePACS\training_runs\convnext_tiny_512_run1\error_analysis\plots\high_confidence_errors_by_type.png
+C:\EyePACS\training_runs\convnext_tiny_512_run1\error_analysis\sample_grids\Good_to_Usable_examples.png
+C:\EyePACS\training_runs\convnext_tiny_512_run1\error_analysis\sample_grids\Good_to_Reject_examples.png
+C:\EyePACS\training_runs\convnext_tiny_512_run1\error_analysis\sample_grids\Usable_to_Good_examples.png
+C:\EyePACS\training_runs\convnext_tiny_512_run1\error_analysis\sample_grids\Usable_to_Reject_examples.png
+C:\EyePACS\training_runs\convnext_tiny_512_run1\error_analysis\sample_grids\Reject_to_Good_examples.png
+C:\EyePACS\training_runs\convnext_tiny_512_run1\error_analysis\sample_grids\Reject_to_Usable_examples.png
+C:\EyePACS\training_runs\convnext_tiny_512_run1\error_analysis\sample_grids\high_confidence_errors_examples.png
+C:\EyePACS\training_runs\convnext_tiny_512_run1\error_analysis\sample_grids\low_confidence_predictions_examples.png
+
+Confirmation that no training was performed: Yes
+Confirmation that dataset files were not modified: Yes

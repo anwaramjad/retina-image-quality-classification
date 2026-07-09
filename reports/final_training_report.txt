@@ -1,0 +1,86 @@
+EyeQ ConvNeXt-Tiny 512x512 Final Training Report
+============================================================
+
+Dataset paths:
+Dataset root: C:\EyePACS\EyeQ_Preprocessed_512
+Train folder: C:\EyePACS\EyeQ_Preprocessed_512\train
+Val folder: C:\EyePACS\EyeQ_Preprocessed_512\val
+Test folder: C:\EyePACS\EyeQ_Preprocessed_512\test
+Train CSV: C:\EyePACS\EyeQ_Preprocessed_512\reports\train_preprocessed.csv
+Val CSV: C:\EyePACS\EyeQ_Preprocessed_512\reports\val_preprocessed.csv
+Test CSV: C:\EyePACS\EyeQ_Preprocessed_512\reports\test_preprocessed.csv
+
+Number of train images: 20165
+Number of val images: 4312
+Number of test images: 4315
+
+Class distribution in train:
+0 (Good): 11769
+1 (Usable): 4504
+2 (Reject): 3892
+
+Class distribution in val:
+0 (Good): 2524
+1 (Usable): 955
+2 (Reject): 833
+
+Class distribution in test:
+0 (Good): 2525
+1 (Usable): 975
+2 (Reject): 815
+
+Class weights used:
+0 (Good): 0.571133
+1 (Usable): 1.492377
+2 (Reject): 1.727047
+
+Model name: ConvNeXt-Tiny
+Image size: 512x512
+Batch size: 8
+Epochs requested: 20
+Actual epochs completed: 16
+Early stopping status: Happened
+Best validation macro F1: 0.895335
+Best validation loss: 0.250122
+Best epoch by macro F1: 11
+Best epoch by val loss: 7
+
+Final test accuracy: 0.918424
+Final test macro precision: 0.894779
+Final test macro recall: 0.898826
+Final test macro F1: 0.896771
+
+Final overfitting / underfitting analysis:
+Training looks healthy
+Last epoch train macro F1: 0.9417
+Last epoch val macro F1: 0.8810
+Last epoch generalization gap: 0.0607
+Last epoch train loss: 0.1407
+Last epoch val loss: 0.2964
+Last epoch loss gap: 0.1557
+Best epoch by macro F1: 11
+Best epoch train macro F1: 0.9126
+Best epoch val macro F1: 0.8953
+Best epoch generalization gap: 0.0173
+
+Files created:
+C:\EyePACS\training_runs\convnext_tiny_512_run1\checkpoints\best_model_by_macro_f1.pth
+C:\EyePACS\training_runs\convnext_tiny_512_run1\checkpoints\best_model_by_val_loss.pth
+C:\EyePACS\training_runs\convnext_tiny_512_run1\checkpoints\last_model.pth
+C:\EyePACS\training_runs\convnext_tiny_512_run1\reports\epoch_metrics.csv
+C:\EyePACS\training_runs\convnext_tiny_512_run1\reports\final_training_report.txt
+C:\EyePACS\training_runs\convnext_tiny_512_run1\reports\validation_classification_report.txt
+C:\EyePACS\training_runs\convnext_tiny_512_run1\reports\test_classification_report.txt
+C:\EyePACS\training_runs\convnext_tiny_512_run1\reports\test_metrics_summary.csv
+C:\EyePACS\training_runs\convnext_tiny_512_run1\reports\class_weights.csv
+C:\EyePACS\training_runs\convnext_tiny_512_run1\plots\loss_curve.png
+C:\EyePACS\training_runs\convnext_tiny_512_run1\plots\accuracy_curve.png
+C:\EyePACS\training_runs\convnext_tiny_512_run1\plots\macro_f1_curve.png
+C:\EyePACS\training_runs\convnext_tiny_512_run1\plots\precision_recall_curve.png
+C:\EyePACS\training_runs\convnext_tiny_512_run1\plots\learning_rate_curve.png
+C:\EyePACS\training_runs\convnext_tiny_512_run1\plots\generalization_gap_curve.png
+C:\EyePACS\training_runs\convnext_tiny_512_run1\plots\val_confusion_matrix.png
+C:\EyePACS\training_runs\convnext_tiny_512_run1\plots\test_confusion_matrix.png
+C:\EyePACS\training_runs\convnext_tiny_512_run1\plots\per_class_f1_curve.png
+
+Confirmation that no dataset files were modified: Yes
